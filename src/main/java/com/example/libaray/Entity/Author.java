@@ -6,8 +6,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Author {
@@ -19,6 +20,7 @@ public class Author {
     private String email;
 
     @OneToMany(mappedBy = "author")
+    @JsonIgnore
     private List<Book> books;
 
     public Author(String name , List<Book> books , Long id , String email) {

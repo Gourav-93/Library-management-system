@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Authors - Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="books.html">Books</a>
+            <a href="authors.html" class="active">Authors</a>
+            <a href="categories.html">Categories</a>
+            <a href="customers.html">Customers</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="grid-2" style="grid-template-columns: 1fr 2fr;">
+            <!-- Add Author Form -->
+            <div class="glass-panel">
+                <h2>Add New Author</h2>
+                <form id="addAuthorForm">
+                    <div class="form-group">
+                        <label for="name">Author Name</label>
+                        <input type="text" id="name" required placeholder="Enter author name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Author Email</label>
+                        <input type="email" id="email" placeholder="Enter author email">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Add Author</button>
+                </form>
+            </div>
+
+            <!-- List Authors -->
+            <div class="glass-panel">
+                <h2>Registered Authors</h2>
+                <div class="loader" id="loader"></div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody id="authorsTableBody">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

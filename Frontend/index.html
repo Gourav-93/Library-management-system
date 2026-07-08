@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+        <nav>
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="books.html">Books</a>
+            <a href="authors.html">Authors</a>
+            <a href="categories.html">Categories</a>
+            <a href="customers.html">Customers</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="glass-panel text-center">
+            <h2>Welcome to the Library Management Dashboard</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Select a module from the navigation above to manage your library resources.</p>
+            
+            <div class="grid-2">
+                <a href="books.html" style="text-decoration: none;">
+                    <div class="glass-panel" style="margin-bottom: 0; text-align: center; transition: transform 0.3s ease;">
+                        <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 0.5rem;">📚 Manage Books</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">View, add, and delete books in the catalog.</p>
+                    </div>
+                </a>
+                
+                <a href="authors.html" style="text-decoration: none;">
+                    <div class="glass-panel" style="margin-bottom: 0; text-align: center; transition: transform 0.3s ease;">
+                        <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 0.5rem;">✍️ Manage Authors</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Register and view authors.</p>
+                    </div>
+                </a>
+
+                <a href="categories.html" style="text-decoration: none;">
+                    <div class="glass-panel" style="margin-bottom: 0; text-align: center; transition: transform 0.3s ease;">
+                        <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 0.5rem;">🏷️ Manage Categories</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Organize books by categories.</p>
+                    </div>
+                </a>
+
+                <a href="customers.html" style="text-decoration: none;">
+                    <div class="glass-panel" style="margin-bottom: 0; text-align: center; transition: transform 0.3s ease;">
+                        <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 0.5rem;">👥 Manage Customers</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Register and view library patrons.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        .grid-2 a > div:hover {
+            transform: scale(1.05);
+            border-color: var(--primary-color);
+        }
+        .text-center {
+            text-align: center;
+        }
+        .text-center h2 {
+            justify-content: center;
+        }
+        .text-center h2::before {
+            display: none;
+        }
+    </style>
+</body>
+</html>

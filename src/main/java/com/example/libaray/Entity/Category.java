@@ -9,6 +9,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Category {
 
@@ -17,6 +19,7 @@ public class Category {
     private Long id;
     private String name;
     @OneToMany(mappedBy = "category")
+    @JsonIgnore
     private List<Book> books;
 
     public Category(String name , List<Book> books , Long id) {
